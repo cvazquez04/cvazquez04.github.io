@@ -85,7 +85,27 @@
 
 <!-- Contingut principal -->
 <div class="content-container">
-    <h1>Benvinguts</h1>
+    <h1>Explicacó del codi</h1>
+    <pre><code>
+        left fft;//crea espai a la memoria anomenat fft
+        fft=new p5.FFT();//crea objecte de la clase fft que te totes les característiques d'una transformada de Fourier. ràpida.
+        //let claudia; crearia un espai a la memoria per un objecte anomenat claudia
+        //claudia=new Homosapiens(); crearia un objecte de la clase Homosapiens amb totes les característiques
+        //per exemple el metode getEnergy() faria la característica humana de menjar
+        // si vull fer menjar a la claudia he d'escriure claudia.getEnergy(); aixó es diu el metode del punt, que al posar un punt
+        //aplico un metode, per fer-lo estudiar claudia.study(). Study son metodes de la clase Homosapiens
+        let bass=fft.getEnergy("bass")//crea variable greu
+        //getEnergy("bass") calcula la energia de totes les frequències greus i dona un número entre 0 i 255 i aquest numero el
+        //guarda en una variable anomenada bass
+        let trable=fft.getEnergy("treble")//crea variable aguda
+        //calcula la energia de totes les frequències agudes i dona un número entre 0 i 255 i el guarde en teble.
+        let r=map(bass, 0,255,255);//crea color vermell
+        //la linia anterior converteix els sons aguts en tons vermellosos perquè l'hem anomenat r de red, ara mateix no es un color,
+        //es un número però quan faci fill(r,0,0); donara tons vermellosos, perquè el fill omple de color.
+        //si poses fill(bass,0,0); també funcionaria, perquè el bass va entre 0 i 255 i el color també
+        let g=map(treble,0,255,50,255);//crea color verd
+        //fem un truc de mapejar els valors petits de bass a valors una mica més grans de r cambiant el 0 per 50.
+    </code></pre>
     <p>Em dic Claudia i sóc alumne del curs 4tB de <a href="https://agora.xtec.cat/ies-pompeu-fabra-martorell/">l'institut Pompeu Fabra</a></p>
     <p>A continuació veuràs un llistat amb diferents projectes que farem durant el curs:</p>
     <ul>
